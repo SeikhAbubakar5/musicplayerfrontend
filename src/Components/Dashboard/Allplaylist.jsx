@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Box, Typography, List, ListItem, ListItemText, CircularProgress } from "@mui/material";
-import { API_BASE_URL } from "../../config"; // Ensure this path is correct
+import { API_BASE_URL } from "../../config"; //my backend deployment link showing error so i use localhost url
 
 const Allplaylist = () => {
   const [playlists, setPlaylists] = useState([]);
@@ -11,8 +11,8 @@ const Allplaylist = () => {
   useEffect(() => {
     const fetchPlaylists = async () => {
       try {
-        // Replace 'your_token_here' with the actual token
-        const token = localStorage.getItem("token"); // or however you're storing the token
+       
+        const token = localStorage.getItem("token");
         const response = await axios.get(`http://localhost:8000/api/playlists`, {
           headers: {
             Authorization: `Bearer ${token}`,

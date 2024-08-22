@@ -16,7 +16,7 @@ const Createplaylist = () => {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const token = localStorage.getItem("token"); // Retrieve the token
+        const token = localStorage.getItem("token");
         if (!token) {
           toast.error("You must be logged in to fetch songs");
           setLoading(false);
@@ -24,10 +24,10 @@ const Createplaylist = () => {
         }
         const response = await axios.get(`http://localhost:8000/api/songs`, {
           headers: {
-            Authorization: `Bearer ${token}`, // Include the token in the headers
+            Authorization: `Bearer ${token}`,
           },
         });
-        setAllSongs(response.data); // Adjust based on your actual response structure
+        setAllSongs(response.data); 
         setLoading(false);
       } catch (error) {
         setError("Failed to fetch songs");
@@ -126,7 +126,7 @@ const Createplaylist = () => {
           >
             {allSongs.map((song) => (
               <MenuItem key={song._id} value={song._id}>
-                {song.title} {/* Adjust based on your song properties */}
+                {song.title}
               </MenuItem>
             ))}
           </Select>

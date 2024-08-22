@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import axios from "axios";
-import toast, { Toaster } from "react-hot-toast"; // Importing the Toaster from react-hot-toast
+import toast, { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { authActions } from "../../redux/store";
-import { API_BASE_URL } from "../../config";
+import { API_BASE_URL } from "../../config";//my backend deployment link showing error so i use localhost url
 
 const Login = () => {
   const navigate = useNavigate();

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import toast from "react-hot-toast";
 import axios from "axios";
-import { API_BASE_URL } from "../../config";
+import { API_BASE_URL } from "../../config";//my backend deployment link showing error so i use localhost url
 
 const Register = () => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const Register = () => {
   };
 
   const registerUser = async (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
 
     if (formData.password !== formData.confirmPassword) {
       toast.error("Password and confirm password do not match");

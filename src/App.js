@@ -14,7 +14,6 @@ function App() {
     <div className="App">
       <Navbar/>
       
-      <Allplaylist/>
          <Routes>
               <Route path="/add-song" element={<Addsong/>} />
               <Route path="/all-song" element={<Getallsong/>} />
